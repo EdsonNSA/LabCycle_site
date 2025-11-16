@@ -2,6 +2,7 @@ import React from 'react';
 import './LandingPage.css';
 import logo from '../logo-page.jpg';
 import characterImage from '../Cyla.gif';
+import seloLabCycleImage from '../selo-labcycle.png';
 
 import { 
     MessageSquare, 
@@ -175,6 +176,45 @@ const LandingPage = () => {
                 </div>
             </section>
 
+            <section id="certificacao" className="lp-section">
+                <div className="lp-container">
+                    
+                    <div className="lp-certification-block" data-aos="fade-up">
+                        <div className="lp-icon-large">
+                            <img 
+                                src={seloLabCycleImage} 
+                                alt="Selo de Certificação LabCycle" 
+                                className="lp-certification-seal-image" 
+                            />
+                        </div>
+                        
+                        <h2>Rumo à Certificação</h2>
+                        
+                        <p className="lp-certification-subtitle">
+                            Nossa plataforma é a ponte para o seu laboratório alcançar certificações de segurança e sustentabilidade, como as normas ISO.
+                        </p>
+                        
+                        <div className="lp-certification-features">
+                            <div>
+                                <h3>Rastreabilidade Total</h3>
+                                <p>Gere relatórios de inventário e descarte que provam sua conformidade para auditores.</p>
+                            </div>
+                            <div>
+                                <h3>Padrões de Segurança</h3>
+                                <p>Garanta que sua equipe segue as normas de manuseio com guias FISPQ.</p>
+                            </div>
+                            <div>
+                                <h3>Gestão Sustentável</h3>
+                                <p>Use nossas métricas para documentar suas práticas de redução de desperdício e descarte correto.</p>
+                            </div>
+                        </div>
+
+                        <a href="httpsa://w.app/jb7cpm" className="lp-btn lp-btn-secondary">Prepare meu Laboratório</a>
+                    </div>
+
+                </div>
+            </section>
+
             <section id="contato" className="lp-section">
                 <div className="lp-container">
                     <h2 data-aos="fade-up">Pronto para revolucionar seu laboratório?</h2>
@@ -197,6 +237,46 @@ const LandingPage = () => {
                             <Mail size={36} />
                             <span>⮞ E-mail</span>
                         </a> 
+                    </div>
+                </div>
+            </section>
+
+            <section id="feedbacks" className="lp-section lp-section-dark">
+                <div className="lp-container">
+                    <h2 data-aos="fade-up">O que dizem sobre o LabCycle</h2>
+                    
+                    <div className="lp-grid-3-col lp-feedback-grid" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <div className="lp-card lp-testimonial-card">
+                            <p className="lp-testimonial-quote">
+                                "Projeto excelente que a universidade precisava há um tempo desse olhar mais atento para o descarte correto dos reagentes, visando aulas mais conscientes e sustentáveis."
+                            </p>
+                            <footer className="lp-testimonial-author">
+                                <strong>Professora</strong>
+                                <span>Coordenadora de Curso</span>
+                            </footer>
+                        </div>
+
+                        <div className="lp-card lp-testimonial-card">
+                            <p className="lp-testimonial-quote">
+                                "O projeto é bastante interessante e deverá contribuir para as aulas práticas desenvolvendo também uma consciência do descarte correto de reagentes sem prejudicar o meio ambiente."
+                            </p>
+                            <footer className="lp-testimonial-author">
+                                <strong>Aluno (UABJ - UFRPE)</strong>
+                                <span>Cursando Engenharia Química</span>
+                            </footer>
+                        </div>
+
+                        <div className="lp-card lp-testimonial-card">
+                            <p className="lp-testimonial-quote">
+                                "É uma ótima ideia para viabilizar uso do laboratório corretamente. Otimizar o processo no laboratório, confio demais nessa equipe."
+                            </p>
+                            <footer className="lp-testimonial-author">
+                                <strong>Técnico de Laboratório</strong>
+                                <span>Gestor de Resíduos</span>
+                            </footer>
+                        </div>
+
                     </div>
                 </div>
             </section>
