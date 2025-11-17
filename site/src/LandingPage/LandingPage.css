@@ -78,6 +78,12 @@ html {
     border: 2px solid var(--cor-primaria);
 }
 
+.lp-certification-block .lp-btn-secondary {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    border: 2px solid var(--cor-primaria);
+}
+
 .lp-btn::before {
     content: '';
     position: absolute;
@@ -92,6 +98,11 @@ html {
 .lp-btn:hover::before { left: 0; }
 .lp-btn-primary:hover { color: var(--cor-primaria); }
 .lp-btn-secondary:hover { color: var(--cor-primaria); }
+
+.lp-certification-block .lp-btn-secondary:hover {
+    color: var(--cor-primaria);
+}
+
 
 .lp-header {
     background-color: var(--cor-fundo-escuro);
@@ -223,7 +234,7 @@ html {
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     text-align: left;
     border-left: 8px solid var(--cor-secundaria);
 }
@@ -233,7 +244,7 @@ html {
 }
 
 .lp-card:hover {
-    transform: translateY(-25px) !important; 
+    transform: translateY(-5px) !important;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
@@ -258,6 +269,7 @@ html {
 .lp-card-step {
     position: relative;
     padding-top: 4rem;
+    border-left: 8px solid var(--cor-secundaria);
 }
 .lp-card-step .lp-step-number {
     position: absolute;
@@ -324,40 +336,7 @@ html {
     color: var(--cor-secundaria);
 }
 
-@media (max-width: 768px) {
-    .lp-body-wrapper h1 { font-size: 3rem; }
-    .lp-body-wrapper h2 { font-size: 2rem; }
-    .lp-body-wrapper h3 { font-size: 1.5rem; }
 
-    #hero {
-        min-height: 80vh;
-        padding-top: 8rem;
-    }
-    #hero p { font-size: 1.2rem; }
-
-    .lp-header .lp-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .lp-nav ul {
-        margin-top: 0;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .lp-nav ul li { margin-left: 0; }
-
-    .lp-social-links {
-        gap: 2.5rem;
-        flex-wrap: wrap;
-    }
-
-    .lp-grid-3-col, .lp-grid-4-col {
-        grid-template-columns: 1fr;
-    }
-    .lp-card { padding: 2rem; }
-    .lp-section { padding: 4rem 2rem; }
-}
 
 .lp-certification-block {
     max-width: 900px;
@@ -386,6 +365,13 @@ html {
     margin-bottom: 1rem;
 }
 
+.lp-certification-seal-image {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .lp-certification-features {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -407,21 +393,6 @@ html {
     line-height: 1.5;
 }
 
-.lp-btn-secondary {
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-claro);
-    border: 2px solid var(--cor-primaria);
-}
-.lp-btn-secondary:hover {
-    color: var(--cor-primaria);
-}
-
-.lp-certification-seal-image {
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 #feedbacks h2 {
     color: var(--cor-texto-claro);
     margin-bottom: 3rem;
@@ -474,8 +445,98 @@ html {
     font-weight: 400;
 }
 
-
 .lp-feedback-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .lp-body-wrapper h1 { font-size: 2.5rem; }
+    .lp-body-wrapper h2 { font-size: 1.8rem; }
+    .lp-body-wrapper h3 { font-size: 1.3rem; } 
+
+    .lp-container {
+        padding: 0 1rem;
+    }
+    
+    .lp-section {
+        padding: 3rem 1rem;
+    }
+
+    .lp-header .lp-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .lp-nav ul {
+        margin-top: 0;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .lp-nav ul li { margin-left: 0; }
+
+    #hero {
+        min-height: 80vh;
+        padding-top: 8rem;
+    }
+    #hero h1 { 
+        font-size: 2.8rem;
+    }
+    #hero p { 
+        font-size: 1rem;
+    }
+    .lp-hero-logo {
+        max-width: 250px;
+    }
+
+    .lp-problem-intro h2 {
+        text-align: center;
+    }
+    
+    .lp-grid-3-col, .lp-grid-4-col {
+        grid-template-columns: 1fr;
+    }
+    .lp-card {
+        padding: 1.5rem;
+    }
+
+    .lp-card-step .lp-step-number {
+        top: 0.8rem;
+        left: 0.8rem;
+        font-size: 2rem; 
+    }
+    .lp-card .lp-icon {
+        margin-bottom: 0.5rem;
+        margin-top: 1rem; 
+    }
+    .lp-card-step {
+        padding-top: 3.5rem;
+    }
+
+
+    .lp-social-links {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .lp-certification-block {
+        padding: 1.5rem;
+    }
+    
+    .lp-certification-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .lp-certification-seal-image {
+        max-width: 200px;
+    }
+
+    .lp-testimonial-quote {
+        padding-left: 1.5rem;
+    }
+
 }
