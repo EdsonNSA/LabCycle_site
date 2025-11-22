@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
-import logo from '../logo-page.jpg';
+import logo from '../logo_.gif';
 import characterImage from '../Cyla.gif';
 import seloLabCycleImage from '../selo-labcycle.png';
 
